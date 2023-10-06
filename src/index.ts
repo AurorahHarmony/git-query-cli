@@ -1,8 +1,5 @@
-import InputHandler from './InputHandler';
+import MultitudesCLI from './MultitudesCLI';
 
 (async () => {
-  const repoOwner = await InputHandler.getInput('Who is the repo owner?');
-  const repoName = await InputHandler.getInput('What is the repo name?');
-
-  console.log(`Excellent! Querying ${repoOwner}/${repoName}`);
+  MultitudesCLI.run();
 })();
