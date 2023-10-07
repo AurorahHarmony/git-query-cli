@@ -10,13 +10,13 @@ class MultitudesCLI {
 
     // Ask for the repo owner name.
     const repoOwner = await InputHandler.getValidatedInput(
-      'Who is the repo owner?',
+      'Who is the repo owner? (e.g., microsoft)',
       { minLength: 1 }
     );
 
     // Ask for the name of the repo.
     let repoName = await InputHandler.getValidatedInput(
-      'What is the repo name?',
+      'What is the repo name? (e.g., typescript)',
       { minLength: 1 }
     );
 
