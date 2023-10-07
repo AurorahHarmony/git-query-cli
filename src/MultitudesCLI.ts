@@ -1,11 +1,14 @@
 import GitHubAPI from './GitHubAPI';
 import InputHandler from './InputHandler';
+import fs from 'fs';
 
 class MultitudesCLI {
   /**
    * Starts the CLI
    */
   public static async run() {
+    MultitudesCLI.printLogos();
+
     console.log('Welcome to Multitudes CLI! Let’s process some Github Data!');
 
     // Ask for the repo owner name.
@@ -33,6 +36,16 @@ class MultitudesCLI {
     } catch (err: any) {
       console.error(err.message);
     }
+  }
+
+  /**
+   * Print out the ASCII art logos
+   */
+  private static printLogos(): void {
+    const asciiAury = fs.readFileSync('./assets/asciiaury.ans', 'utf8');
+    console.log(asciiAury);
+    const itGitsYou = fs.readFileSync('./assets/itgitsyou.ans', 'utf8');
+    console.log(itGitsYou);
   }
 }
 
