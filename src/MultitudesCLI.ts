@@ -42,10 +42,14 @@ class MultitudesCLI {
    * Print out the ASCII art logos
    */
   private static printLogos(): void {
-    const asciiAury = fs.readFileSync('./assets/asciiaury.ans', 'utf8');
-    console.log(asciiAury);
-    const itGitsYou = fs.readFileSync('./assets/itgitsyou.ans', 'utf8');
-    console.log(itGitsYou);
+    try {
+      const asciiAury = fs.readFileSync('./assets/asciiaury.ans', 'utf8');
+      console.log(asciiAury);
+      const itGitsYou = fs.readFileSync('./assets/itgitsyou.ans', 'utf8');
+      console.log(itGitsYou);
+    } catch (err) {
+      // We don't mind if these fail to load.
+    }
   }
 }
 
