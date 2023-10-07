@@ -30,8 +30,8 @@ class MultitudesCLI {
       console.log(
         `There are ${pullRequests.length} open pull requests in ${repoOwner}/${repoName}`
       );
-    } catch (err) {
-      console.error(err);
+    } catch (err: any) {
+      console.error(err.message);
     }
   }
 }
